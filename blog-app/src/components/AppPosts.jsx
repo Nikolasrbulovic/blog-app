@@ -8,7 +8,7 @@ const AppPosts = () =>{
       }, []);
     
     return(
-        <div>
+        <div className="row mb-2">
             {posts?.map((post)=>(
             <SinglePost post={post}></SinglePost>
           ))}
