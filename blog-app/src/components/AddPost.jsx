@@ -7,7 +7,7 @@ const AddPost = ()=>{
     const [title, setTitle]= useState()
     const [text, setText] = useState()
     const {id} = useParams();
-    console.log(id)
+   
         useEffect(()=>{
             if(id){
             getPost(id).then(({ data }) => {
@@ -15,7 +15,7 @@ const AddPost = ()=>{
                 setText(data.text)
               });
             } 
-        },[id])
+        },[])
     
     const resetHandler = () =>{
         setTitle('')
